@@ -1,0 +1,30 @@
+.app {
+  font-family: "04b03", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4.2rem 0;
+
+  .avatar {
+    width: 12.4rem;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .intro {
+    text-align: center;
+    &_main {
+      color: #161330;
+      font-family: "04b", sans-serif;
+      font-size: 3.2rem;
+      margin: 4.2rem 0;
+    }
+
+    &_second {
+      font-size: 2.0rem;
+    }
+  }
+}

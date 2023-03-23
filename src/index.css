@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "04b";
+  src: url("/fonts/04B.woff");
+}
+
+@font-face {
+  font-family: "04b03";
+  src: url("/fonts/04b03.woff");
+}
+
+:root {
+  font-size: 12px;
+}
+
+body {
+  font-size: 1.6rem;
+  color: #4F4E52;
+  height: 100vh;
+  background-color: #F1EFFF;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.row {
+  width: 40%;
+  margin: 0 auto;
+}
