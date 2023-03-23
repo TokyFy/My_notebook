@@ -11,6 +11,7 @@ const MenuCard: FunctionComponent<Props> = ({ img , label} ) => {
       <div className={style.card_image}>
           <img src={img} alt={label}/>
       </div>
+      <p className={style.card_label}>{label}</p>
   </div>);
 };
 
