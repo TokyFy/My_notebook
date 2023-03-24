@@ -13,9 +13,15 @@ function App() {
   let [theme, setTheme] = useState("LIGHT");
 
   useEffect(() => {
+    setTheme(localStorage.getItem("theme") || "LIGHT");
+  }, []);
+
+  useEffect(() => {
     theme === "DARK"
       ? (document.body.style.backgroundColor = "#030018")
       : (document.body.style.backgroundColor = "#F1EFFF");
+
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   const switchTheme = () => {
