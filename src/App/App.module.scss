@@ -1,12 +1,25 @@
+@use "./src/style/color";
+
 .app {
   font-family: "04b03", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4.2rem 0;
+  padding: 6.4rem 0;
+
+  .themeSwitcher {
+    font-family: "04b", sans-serif;
+    color: transparentize(color.$primary-dark , .25);
+    margin-bottom: 6.4rem;
+    cursor: pointer;
+
+    &::selection {
+     background-color: transparent;
+    }
+  }
 
   .avatar {
-    width: 12.4rem;
+    width: 9.6rem;
 
     img {
       width: 100%;
@@ -17,7 +30,7 @@
   .intro {
     text-align: center;
     &_main {
-      color: #161330;
+      color: color.$primary-dark;
       font-family: "04b", sans-serif;
       font-size: 3.2rem;
       margin: 4.2rem 0;
@@ -25,6 +38,30 @@
 
     &_second {
       font-size: 2.0rem;
+    }
+  }
+
+  .footer {
+    font-size: 1.6rem;
+    margin-top: 9.6rem;
+
+    .author {
+      font-family: "04b", sans-serif;
+      font-size: .9em;
+    }
+  }
+}
+
+.app[data-theme="DARK"] {
+  color: color.$primary-color;
+
+  .themeSwitcher {
+    color: transparentize(color.$primary-color , .25);
+  }
+
+  .intro {
+    &_main {
+      color: color.$primary-color;
     }
   }
 }
