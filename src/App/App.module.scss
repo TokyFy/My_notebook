@@ -7,14 +7,19 @@
   align-items: center;
   padding: 6.4rem 0;
 
+  @media (max-width: 768px) {
+    padding: 4.8rem 0;
+  }
+
+
   .themeSwitcher {
     font-family: "04b", sans-serif;
-    color: transparentize(color.$primary-dark , .25);
+    color: transparentize(color.$primary-dark, .25);
     margin-bottom: 6.4rem;
     cursor: pointer;
 
     &::selection {
-     background-color: transparent;
+      background-color: transparent;
     }
   }
 
@@ -29,21 +34,36 @@
 
   .intro {
     text-align: center;
+
     &_main {
       color: color.$primary-dark;
       font-family: "04b", sans-serif;
       font-size: 3.2rem;
       margin: 4.2rem 0;
+
+      @media (max-width: 768px) {
+        font-size: 2.8rem;
+      }
+
     }
 
     &_second {
       font-size: 2.0rem;
+
+      @media (max-width: 768px) {
+        font-size: 1.6rem;
+      }
+
     }
   }
 
   .footer {
     font-size: 1.6rem;
     margin-top: 9.6rem;
+
+    @media (max-width: 768px) {
+      margin-top: 4.8rem;
+    }
 
     .author {
       font-family: "04b", sans-serif;
@@ -56,7 +76,7 @@
   color: color.$primary-color;
 
   .themeSwitcher {
-    color: transparentize(color.$primary-color , .25);
+    color: transparentize(color.$primary-color, .25);
   }
 
   .intro {

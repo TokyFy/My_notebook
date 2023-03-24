@@ -56,7 +56,7 @@ html.has-scroll-dragging {
 
 :root {
   font-size: 12px;
-  --theme : "ligth";
+  --theme: "ligth";
 }
 
 body {
@@ -76,6 +76,18 @@ body {
 //}
 
 .row {
-  width: 40%;
+  width: 80%;
   margin: 0 auto;
+}
+
+@media (min-width: 1281px) {
+  .row {
+    max-width: 50rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    width: 90%;
+  }
 }
