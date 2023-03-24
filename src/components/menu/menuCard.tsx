@@ -1,5 +1,6 @@
-import React, { FunctionComponent } from 'react';
+import React, {FunctionComponent, useContext} from 'react';
 import style from "./menu.module.scss";
+import themeContext from "../../context/themeContext";
 
 interface Props {
     img : string;
@@ -7,7 +8,10 @@ interface Props {
 }
 
 const MenuCard: FunctionComponent<Props> = ({ img , label} ) => {
-  return (<div className={style.card}>
+
+    const theme = useContext(themeContext);
+
+    return (<div data-theme={theme} className={style.card}>
       <div className={style.card_image}>
           <img src={img} alt={label}/>
       </div>

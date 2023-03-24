@@ -1,3 +1,5 @@
+@use "../src/style/color";
+
 .menu {
   display: grid;
   grid-template-columns: repeat(3 , 1fr);
@@ -5,9 +7,8 @@
   margin-top: 4.2rem;
 }
 
-
 .card {
-  background-color: #CCCCE6;
+  background-color: transparentize(color.$primary-dark , .9);
   aspect-ratio: 1;
   display: flex;
   align-items: center;
@@ -17,7 +18,7 @@
   position: relative;
 
   &_image {
-    width: 35%;
+    width: 45%;
 
     img {
       width: 100%;
@@ -35,7 +36,7 @@
     transform: translate(-50% , -50%);
     opacity: 0;
     transition: all .5s ease;
-    color: #161330;
+    color: color.$primary-dark;
   }
 
   &:hover {
@@ -47,5 +48,13 @@
       transform: translate(-50% , -70%);
       opacity: 1;
     }
+  }
+}
+
+.card[data-theme="DARK"] {
+  background-color: transparentize(color.$primary-color , .9);
+
+  .card_label {
+    color: color.$primary-color;
   }
 }
