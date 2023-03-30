@@ -14,17 +14,22 @@
 }
 
 .card {
-  background-color: transparentize(color.$primary-dark, .9);
+  background-color: lighten(color.$primary-dark, 75%);
   aspect-ratio: 1;
   display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
-  border-radius: .9rem;
   position: relative;
+  flex-direction: column;
+  padding: 1.8rem;
+  justify-content: space-around;
+  align-items: center;
+  border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAAAX5JREFUeF7t3cFNAgEURVGpwcQ67L8K6zCxBo1LhoSfHy6RyHE7Mxc488AdnF6Gv7fX9+/pnGc6/vn1cbr2eq8e/L0Q6Dkf0PjtA/SvQY9v8emOxM/34XOTz8Vn6HTBw7/iOz/ByQfo8gYAXYJNp4+g0wnTAzz78aPfCehtkwB6m9/F1UCBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkKBxgJxzkLvDXrsH8V9j/250OTja9eXiwW6BJtOBzoJLY+vQafP1OXj/7vTp/8pfk9pecuBLsGm04FOQsvjE+gPzRHLxHS293UAAAAASUVORK5CYII=") 28 /  28px / 0 round;
+  border-width: thin;
+  border-style: solid;
+  border-radius: 2.0rem;
 
   &_image {
-    width: 45%;
+    width: 30%;
 
     img {
       width: 100%;
@@ -34,31 +39,35 @@
   }
 
   &_label {
-    font-size: 1.6rem;
-    font-family: "04b", sans-serif;
-    position: absolute;
-    bottom: 1%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
+    font-size: 2rem;
+    font-family: "04b03", sans-serif;
     transition: all .5s ease;
     color: color.$primary-dark;
+    opacity: .5;
+    text-transform: lowercase;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
   }
 
   &:hover {
-    img {
-      transform: scale(0.8);
-    }
+    background-color: lighten(color.$primary-dark, 70%);
 
     & > p {
-      transform: translate(-50%, -70%);
       opacity: 1;
+      text-decoration: underline;
     }
   }
 }
 
 .card[data-theme="DARK"] {
-  background-color: transparentize(color.$primary-color, .9);
+  background-color: transparentize(color.$primary-color, 1);
+  border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAAAXpJREFUeF7t3UFOwgAURVG7AuP+F2lcgcYhJeHnh0skcpy2vcDpA2dwvA1/X5/f39M5r3T8/eM4br3emwd/LwR6yQc0fvsA/WvQ81t8uiPx83363ORz9Rk6XfD0r/jBT3DyAbq8AUCXYNPpI+h0wvQAr3787HcAvW8SQO/zu7oaKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5ZKNBYIM5Z6KNBz/2zuO+xvxSafHzt+nKxQJdg0+lAJ6Hl8TXo9Jm6fPx/d/r0P8XvKS1vOdAl2HQ60EloeXwC/QEJH3drxnSl5AAAAABJRU5ErkJggg==") 28 /  28px / 0 round;
+
+  .card_image {
+    filter: brightness(1.25);
+  }
 
   .card_label {
     color: color.$primary-color;

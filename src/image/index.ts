@@ -1,14 +1,25 @@
-import craftImage from "./craft.png";
-import gameImage from "./game.png";
-import keyboardImage from "./keyboard.png";
-import moviesImage from "./movies.png";
-import musicImage from "./music.png";
-import notebookImage from "./notebook.png";
-import penImage from "./pen.png";
-import toolsImage from "./tools.png";
-import trainingImage from "./trainning.png";
-import heartImage from "./blackHeart.png";
-import avatarLight from "./avatar-ligth.png";
+import BlogsImage from "./Blogs.png";
+import ToolsImage from "./Tools.png";
+import NotesImage from "./Notes.png";
+import GamesImage from "./Game.png";
+import MusicsImage from "./Musics.png";
+import TrainingImage from "./Trainning.png";
+import CraftImage from "./Crafts.png";
+import ResourcesImage from "./Resources.png";
+import GuestBooksImage from "./GuestBooks.png";
 import avatar from "./avatar.png";
+import avatarLight from "./avatar-ligth.png";
 
-export {notebookImage,trainingImage,toolsImage,penImage,musicImage,keyboardImage,moviesImage,craftImage,gameImage , heartImage , avatarLight , avatar}
+export {
+  NotesImage,
+  TrainingImage,
+  ToolsImage,
+  ResourcesImage,
+  MusicsImage,
+  GamesImage,
+  GuestBooksImage,
+  BlogsImage,
+  CraftImage,
+  avatar,
+  avatarLight,
+};
