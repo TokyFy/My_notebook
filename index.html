@@ -1,13 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/avatar.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <link href="/avatar.png" rel="icon" type="image/svg+xml"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>NoteBok</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+</head>
+
+<style>
+    :root {
+        font-size: 10px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #loadingScreen {
+        width: 100%;
+        height: 100%;
+        background-color: #f1efff;
+        position: absolute;
+        z-index: 9 !important;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #loadingScreen .logo {
+        width: 6.4rem;
+    }
+
+    #loadingScreen .logo img {
+        width: 100%;
+        height: auto;
+    }
+
+</style>
+
+<body>
+
+<div id="loadingScreen">
+    <div class="logo">
+        <img alt="moon image" src="/avatar.png"/>
+    </div>
+</div>
+
+<div id="root"></div>
+<script src="/src/main.tsx" type="module"></script>
+</body>
 </html>

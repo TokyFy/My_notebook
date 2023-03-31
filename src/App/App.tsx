@@ -14,6 +14,13 @@ function App() {
 
   useEffect(() => {
     setTheme(localStorage.getItem("theme") || "LIGHT");
+
+    document.fonts.onloadingdone = () => {
+      const loader = document.getElementById("loadingScreen")!;
+      if (loader) {
+        loader.remove();
+      }
+    };
   }, []);
 
   useEffect(() => {
