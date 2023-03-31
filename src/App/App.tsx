@@ -28,6 +28,8 @@ function App() {
       ? (document.body.style.backgroundColor = "#030018")
       : (document.body.style.backgroundColor = "#F1EFFF");
 
+    document.body.dataset.theme = theme;
+
     localStorage.setItem("theme", theme);
   }, [theme]);
 
@@ -56,7 +58,7 @@ function App() {
         <div data-scroll-section="">
           <ThemeContext.Provider value={theme}>
             <div className="row">
-              <div data-theme={theme} className={style.app}>
+              <div className={style.app}>
                 <div
                   onClick={() => switchTheme()}
                   className={style.themeSwitcher}

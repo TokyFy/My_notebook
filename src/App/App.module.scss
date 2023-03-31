@@ -72,7 +72,7 @@
   }
 }
 
-.app[data-theme="DARK"] {
+[data-theme="DARK"] .app {
   color: color.$primary-color;
 
   .themeSwitcher {
